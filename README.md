@@ -21,3 +21,11 @@ Kubernetes Operations
 `kops replace -f <filename.yml>`
 
 `kops update cluster <cluster_name> --yes` 
+
+## kops rolling-upgrade cluster
+Rolling upgrade one of the use case is vertically scale-in/out _"change in ec2 type"_
+`kops replace -f <filename.yml>`
+
+`kops rolling-update cluster <cluser_name> --yes`
+
+`kops rolling-update cluster <cluster_name>  --yes --fail-on-validate-error="false" -node-interval 8m --instance-group nodes`
