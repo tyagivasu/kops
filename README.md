@@ -19,4 +19,5 @@ Kubernetes Operations
 
 ## kops update cluster
 `kops replace -f <filename.yml>`
+
 `kops update cluster <cluster_name> --yes` 
