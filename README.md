@@ -12,10 +12,10 @@ Kubernetes Operations
   --dry-run \
   -oyaml > myk8cluster.yaml`
 
-# kops create cluster
+## kops create cluster
 `kops create -f <filename.yml>`
 `kops update cluster <cluster_name> --yes`
 
-# kops update cluster
+## kops update cluster
 `kops replace -f <filename.yml>`
 `kops update cluster <cluster_name> --yes` 
