@@ -14,6 +14,7 @@ Kubernetes Operations
 
 ## kops create cluster
 `kops create -f <filename.yml>`
+
 `kops update cluster <cluster_name> --yes`
 
 ## kops update cluster
