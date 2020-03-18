@@ -29,14 +29,23 @@ kops create cluster --name=mycluster.tyagi.k8.net \
 -oyaml > myk8cluster.yaml
 ```
 
+```
+Exporting KOPS_STATE_STORE is must before running any of below commands.
+
+export KOPS_STATE_STORE="s3://INSERT S3 BUCKET HERE"
+```
 ## kops create cluster
 ```
+export KOPS_STATE_STORE="s3://INSERT S3 BUCKET HERE"
+
 1. kops create -f <filename.yml>
 2. kops update cluster <cluster_name> --yes`
 ```
 
 ## kops update cluster
 ```
+export KOPS_STATE_STORE="s3://INSERT S3 BUCKET HERE"
+
 1. kops replace -f <filename.yml>
 2. kops update cluster <cluster_name> --yes
 ```
