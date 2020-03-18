@@ -1,6 +1,7 @@
 # kops
 Kubernetes Operations
 
+# installation
 ## install kubectl
 ```
 1. curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl`
@@ -16,6 +17,12 @@ chmod +x kops-linux-amd64
 sudo mv kops-linux-amd64 /usr/local/bin/kops
 ```
 
+# execution
+```
+Exporting KOPS_STATE_STORE is must before running any of below commands.
+
+export KOPS_STATE_STORE="s3://INSERT S3 BUCKET HERE"
+```
 ## kops create cluster yaml file
 
 ```
@@ -29,11 +36,6 @@ kops create cluster --name=mycluster.tyagi.k8.net \
 -oyaml > myk8cluster.yaml
 ```
 
-```
-Exporting KOPS_STATE_STORE is must before running any of below commands.
-
-export KOPS_STATE_STORE="s3://INSERT S3 BUCKET HERE"
-```
 ## kops create cluster
 ```
 export KOPS_STATE_STORE="s3://INSERT S3 BUCKET HERE"
